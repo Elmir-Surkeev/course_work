@@ -19,25 +19,8 @@
 </div>
 <hr>
 <h3>Добавить автомобиль в аренду</h3>
-<form action="/car/create" method="post">
-    <p>
-        <b>Марка машины:</b><br>
-        <input type="text" name="title"><br><br>
-
-        <b>Описание объявления:</b><br>
-        <input type="text" name="desc"><br><br>
-
-        <b>Цена:</b><br>
-        <input type="number" name="price"><br><br>
-
-        <b>Вид аренды:</b><br>
-        <input type="text" name="typeRental"><br><br>
-
-        <b>Расход топлива:</b><br>
-        <input type="number" name="consumption"><br><br>
-
+<form action="/car/delete/${car.id }" method="post">
         <input type="submit" value="Добавить автомобиль">
-    </p>
 </form>
 </body>
 </html>
