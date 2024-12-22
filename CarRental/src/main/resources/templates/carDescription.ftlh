@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CAR_RENTAL</title>
+    <title>BUYSELL</title>
 </head>
 <body>
-<h1>Car Rental</h1>
+<h1>BUYSELL</h1><hr>
+<h4>Подробная информация о товаре</h4>
+<b>Название товара: </b>${product.title}<br>
+<b>Описание товара: </b>${product.desc}<br>
+<b>Цена: </b>${product.price}<br>
+<b>Город: </b>${product.city}<br>
+<b>Автор: </b>${product.author}<br>
 <hr>
-<h4>Car description</h4>
-<div>
-    <p>
-        <b>Марка:</b> ${car.title}<br>
-        <b>Описание:</b> ${car.description}<br>
-        <b>Категория:</b> ${car.category}<br>
-        <b>Год:</b> ${car.year}<br>
-        <b>Цена:</b> ${car.price}<br>
-        <a href="/car_info/${car.id}">Подробнее</a>
-    </p>
-</div>
-<hr>
-<h3>Добавить автомобиль в аренду</h3>
-<form action="/car/delete/${car.id }" method="post">
-        <input type="submit" value="Добавить автомобиль">
+<form action="/product/delete/${product.id}" method="post">
+    <input type="submit" value="Удалить товар"/>
 </form>
 </body>
 </html>

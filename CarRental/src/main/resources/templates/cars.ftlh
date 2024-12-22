@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CAR_RENTAL</title>
+    <title>BUYSELL</title>
 </head>
 <body>
-<H1>Car rental</H1>
-<hr>
-<h4>Cars of any category </h4>
-<#list cars as car>
-    <div><p>
-            <b>${car.title}</b>
-            ${car.description}
-            ${car.category}
-            ${car.year}
-            ${car.price}
-<#--            ${car.year}-->
-            ${car.price}
-            <a href="/car_info/${car.id}">Подробнее</a>
-        </p></div>
-    <hr>
-    <h3>
-        Add my car for rental
-    </h3>
-    <form action="/car/create" method="post">
-        Марка машины
-        <input type="text" name="title"> <br>
-        Описание объявление
-        <b>Описание:</b> ${car.description?if_exists!''}<br>
-        Цена
-        <input type="number" name="price"> <br>
-        Вид аренды
-        <input type="text" name="typeRental"> <br>
-        Расход топлива
-        <input type="number" name="title"> <br>
-        <input type="submit" value="add car"/>
-    </form>
+<h1>BUYSELL</h1><hr>
+<h4>Товары со всей России</h4>
+<#list products as product>
+    <div>
+        <p><b>${product.title}</b> ${product.price} руб. | <a href="/product/${product.id}">Подробнее...</a></p>
+    </div>
 </#list>
+<hr>
+<h3>Создать новый товар</h3>
+<form action="/product/create" method="post">
+    Название объявления: <input type="text" name="title"/><br><br>
+    Описание объявления: <input type="text" name="description"/><br><br>
+    Цена: <input type="number" name="price"/><br><br>
+    Город: <input type="text" name="city"/><br><br>
+    Имя: <input type="text" name="author"/><br><br>
+    <input type="submit" value="Добавить товар"/>
+</form>
 </body>
 </html>
