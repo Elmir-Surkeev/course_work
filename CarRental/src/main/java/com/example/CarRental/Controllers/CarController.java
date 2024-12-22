@@ -2,20 +2,18 @@ package com.example.CarRental.Controllers;
 
 import com.example.CarRental.Models.Car;
 import com.example.CarRental.Services.CarServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+@RequiredArgsConstructor
 @Controller
 // Контроллер контролирует обращение пользователя к приложению
 public class CarController {
     private final CarServices carServices;
-
-    public CarController(CarServices carServices) {
-        this.carServices = carServices;
-    }
 
     // При переходе на локальный хост будет вызываться
     @GetMapping("/")
