@@ -26,7 +26,7 @@
         Марка машины
         <input type="text" name="title"> <br>
         Описание объявление
-        <input type="text" name="desc"> <br>
+        <b>Описание:</b> ${car.description?if_exists!''}<br>
         Цена
         <input type="number" name="price"> <br>
         Вид аренды
